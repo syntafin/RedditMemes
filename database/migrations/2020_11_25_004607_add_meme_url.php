@@ -13,7 +13,7 @@ class AddMemeUrl extends Migration
      */
     public function up()
     {
-        Schema::create('memes', function (Blueprint $table) {
+        Schema::table('memes', function (Blueprint $table) {
             $table->string('url');
         });
     }
