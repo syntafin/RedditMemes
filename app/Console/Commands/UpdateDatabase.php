@@ -50,12 +50,11 @@ class UpdateDatabase extends Command
 
             $result = $json[0]->data->children[0];
 
-            $meme = Meme::where('id', $meme->id);
+            $meme = Meme::where('id', $meme->id)->first();
             $meme->name = $result->data->title;
             $meme->subreddit = $result->data->subreddit;
             $meme->image = $result->data->url_overridden_by_dest;
             $meme->thumbnail = $result->data->thumbnail;
-            $meme->url = $meme->url;
             $meme->save();
             $bar->advance();
         }

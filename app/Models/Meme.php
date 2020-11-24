@@ -16,7 +16,9 @@ class Meme extends Model
         'name',
         'subreddit',
         'image',
-        'user_id'
+        'user_id',
+        'thumbnail',
+        'url'
     ];
 
     public function user()
