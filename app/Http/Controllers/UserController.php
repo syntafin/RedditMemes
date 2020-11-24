@@ -39,7 +39,9 @@ class UserController extends Controller
             'name' => $result->data->title,
             'subreddit' => $result->data->subreddit,
             'image' => $result->data->url_overridden_by_dest,
-            'user_id' => auth()->user()->id
+            'user_id' => auth()->user()->id,
+            'thumbnail' => $result->data->thumbnail,
+            'url' => $request->url
         ]);
         $file->save();
 
