@@ -4,6 +4,12 @@
 
 This project is just to show how an simple reddit image collection can work.
 
+## Demo
+
+You want to see an Demo? There is an always up-to-date demo hosted here:  
+
+[RedditMemes Demo](https://reddit.syntafin.dev)
+
 ## Requirements
 
 To run the app, the following requirements are needed:
