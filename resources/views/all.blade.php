@@ -10,12 +10,21 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="p-6 sm:px-20 bg-white border-b border-gray-200">
                     {{ $data->links() }}
-                    @foreach($data as $meme)     
-                        <div class="mt-4 text-2xl">
-                            <a href="{{ route('show', ['id' => $meme->id]) }}">{{ $meme->name }}</a>
-                        </div>
-                        <div class="mb-4">
-                            {{ $meme->user->name }} am {{ $meme->created_at->format('d.m.Y') }}
+                    @foreach($data as $meme)
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <img src="{{ $meme->thumbnail }}" alt="thumbnail" />    
+                            </div>
+                            </div>
+                            <div class="ml-4">
+                            <dt class="text-lg leading-6 font-medium text-gray-900">
+                                <a href="{{ route('show', ['id' => $meme->id]) }}">{{ $meme->name }}</a>
+                            </dt>
+                            <dd class="mt-2 text-base text-gray-500">
+                                {{ $meme->user->name }} am {{ $meme->created_at->format('d.m.Y') }}
+                            </dd>
+                            </div>
                         </div>
                     @endforeach
                     {{ $data->links() }}

@@ -59,6 +59,7 @@ class UpdateDatabase extends Command
             $bar->advance();
         }
         $bar->finish();
+        
         $this->info('All Memes are UpToDate');
     }
 }

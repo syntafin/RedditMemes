@@ -16,6 +16,7 @@
                 
                     <div class="mt-6 text-gray-500">
                         <img src="{{ $meme->image }}" alt="image" />
+                        <a href="{{ $meme->url }}" target="_blank" class="text-center mt-2">Original öffnen</a>
                     </div>
                 </div>
             </div>
